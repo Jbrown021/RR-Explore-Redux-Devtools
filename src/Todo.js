@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { addTodo, removeOne, clearTodo } from './features/todoSlice'
+import { addTodo, removeOne, cleartodo } from './features/todoSlice'
 
 function Todo() {
     const items = useSelector((state) => state.todos.items)
@@ -23,9 +23,9 @@ function Todo() {
             <ul>
                 {renderItems}
             </ul>
-            <button onClick={() => dispatch(clearTodo())}>Clear</button>
+            <button onClick={()=> dispatch(cleartodo())}>Clear</button>
         </div>
-    )
+            )
 }
 
 export default Todo
